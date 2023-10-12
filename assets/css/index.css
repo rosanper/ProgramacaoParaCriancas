@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Open Sans';
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.menu {
+  width: 100%;
+  padding: .5rem 1rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFCB42;
+  z-index: 1;
+}
+  
+.menu__logo {
+  max-width: 160px;
+}
+  
+.menu__logo-image {
+  width: 100%;
+  height: 2rem
+}
+  
+.menu__link{
+  margin-right: 1rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header{
+  width: 100%;
+  height: 100vh;
+  margin-top: 2.5rem;
+  text-align: left;
+  z-index: 2;
+}
+#cabecalho{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  background-image: url(../images/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-color: #277BC0;
+  width: 100vw;
+  height: 70vh;
+  padding: 1rem;
+  margin: 0 auto;
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 16px;
+}
+
+#texto__cabecalho{
+  width: 7rem;
+}
+
+h1{
+  color: #FFF;
+  font-family: Luckiest Guy;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2{
+  text-align: center;
+}
+
+#about{
+  text-align: justify;
+  padding: 1rem;
+  background-color: #FFF4CF;
+}
+
+#description{
+  padding: 0 1rem;
+}
+
+/* Seções de conteúdo */
+.content{
+  height: auto;
+  width: auto;
+  margin-top: 2.5rem;
+}
+
+.white{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+#playing{
+  background-image: url(../images/jogando.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 17rem;
+  width: 23rem;
+  margin-top: 1.5rem;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: left;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.yellow{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0 1.5rem;
+  background-color: #FFF4CF;
+}
+
+#watching{
+  background-image: url(../images/assistindo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 17rem;
+  width: 23rem;
+}
+
+.cadastro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+button{
+  width: 50%;
+  height: 2rem;
+  background-color: #FFB200;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  animation: wiggle 2.2s linear infinite;
+}
+
+.cadastro button:hover{
+  animation: none;
+  outline: 2px solid #FFB200;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: auto;
+  height: 30vh;
+  background-color: #277BC0;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.empresa, 
+.sections{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+.sections p {
+  font-size: 14px;
+}
+.footer__logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Luckiest Guy';
+}
+
+.footer__logo img{
+  max-width: 160px;
+  max-height: 3rem;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .menu__logo-image {
+    height: 2.5rem
+  }
+  header{
+    margin-top: 3.5rem;
+    height: 80vh;
+  }
+  #texto__cabecalho{
+    margin-left: 1rem;
+    font-size: 32px;
+    width: 21rem;
+  }
+  h1{
+    margin-left: 1rem;
+    font-size: 64px;
+  }
+  .content{
+    margin-top: 1.5rem;
+  }
+  .white,
+  .yellow{
+    flex-direction: row;
+    align-items: center;
+  }
+  #playing,
+  #watching{
+    width: 100rem;
+    margin: 1.5rem;
+  }
+  button{
+    width: 30%;
+  }
+}
+
+/* Telas maiores */
+@media screen and (min-width: 1024px){
+  .menu__logo-image {
+    height: 2.5rem
+  }
+  .menu__link{
+    font-size: 1rem;
+  }
+  header{
+    width: 100vw;
+    margin-top: 3rem;
+    height: 90vh;
+  }
+  #cabecalho{
+    background-position: center;
+    background-size: contain;
+    width: 100vw;
+    height: 80vh;
+  }
+  #texto__cabecalho{
+    margin-left: 30rem;
+    font-size: 32px;
+    width: 21rem;
+  }
+  #about{
+    height: auto;
+  }
+  h1{
+    margin-left: 30rem;
+    font-size: 64px;
+  }
+  #description{
+    padding: 5rem;
+  }
+  .text{
+    width: 30rem;
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  .white{
+    height: 500px;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+  .white,
+  .yellow{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .yellow{
+    height: 500px;
+    max-width: 100%;
+  }
+  #playing,
+  #watching{
+    width: 500px;
+    max-width: 100%;
+  }
+  #playing{
+    height: 800px;
+    max-height: 60%;
+  }
+  #watching{
+    margin: 1.5rem;
+  }
+  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    height: 25vh;
+  }
+  .empresa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .sections{
+    gap: 5rem;
+  }
+  button{
+    width: 15%;
+  }
+}
+/* Animação do botão */
+@keyframes wiggle {
+  0%,
+  10% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%,
+  100% {
+    transform: rotate(0);
+  }
+}
