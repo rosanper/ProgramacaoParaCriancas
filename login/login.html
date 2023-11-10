@@ -20,9 +20,12 @@
     <header>
         <nav>
             <nav class="menu">
-                <a href="..\index.html" class="menu__logo">
-                  <img src="images/logo.png" alt="Logotipo" class="menu__logo-image"/>
-                </a>
+                <div class="header-logo">
+                  <a href="..\index.html" class="menu__logo">
+                    <img src="images/logo.png" alt="Logotipo" class="menu__logo-image"/>
+                  </a>
+                  <p>CodeKids</p>
+                </div>
                 <div class="menu__links">
                   <a href="../jogos/jogos.html" class="menu__link">Jogar</a>
                   <a href="../videoAula/videoAula.html" class="menu__link">Assistir</a>
@@ -36,58 +39,58 @@
 
     <main>
 
-        <section class="formulario">
-            <h2>faça seu Login</h2>
+        <section class="formulario-box">
+            <div class="formulario-nome">
+              <h2>Faça seu Login</h2>
+            </div>  
             <form action="">
-                <div>
+                <div class="formulario-item">
                     <label for="iemail">e-mail:</label> 
                     <input placeholder="Digite seu e-mail" type="email" name="e-mail" id="iemail" required>
                 </div>
-                <div>
+                <div class="formulario-item">
                     <label for="isenha">Senha: </label>
                     <input placeholder="Digite sua senha" type="text" name="senha" id="isenha" required>
                 </div>
-                <div> 
-                    <input type="submit" value="Fazer login">
+                <div class="formulario-botao"> 
+                    <input class="botao" type="submit" value="Fazer login">
                 </div> 
             </form>
         </section>
         <div>
             <p>ou</p>
         </div>
-        <section class="formulario">
-            <h2>faça seu cadastro</h2>
+        <section class="formulario-box">
+            <div class="formulario-nome">
+              <h2>Faça seu cadastro</h2>
+            </div>  
             <form action="">
-                <div>
-                    <label for="ifoto">Foto</label>
-                    <input type="image" name="foto" id="ifoto" >
-                </div>
-                <div>
+                <div class="formulario-item">
                     <label for="iemail">e-mail:</label> 
                     <input placeholder="Digite seu e-mail" type="email" name="e-mail" id="iemail" required>
                 </div>
-                <div>
+                <div class="formulario-item">
                     <label for="inome">Nome:</label> 
                     <input placeholder="Digite seu nome" type="text" name="nome" id="inome" required>
                 </div>
-                <div>
+                <div class="formulario-item">
                     <label for="isobrenome">Sobrenome: </label>
                     <input placeholder="Digite seu sobrenome" type="text" name="sobrenome" id="isobrenome">
                 </div>
-                <div>
+                <div class="formulario-item">
                     <label for="idataNascimento">Data de Nascimento</label>
                     <input type="date" name="dataNascimento" id="idataNascimento">
                 </div>
-                <div>
+                <div class="formulario-item">
                     <label for="isenha">Senha: </label>
                     <input placeholder="Digite sua senha" type="text" name="senha" id="isenha" required>
                 </div>
-                <div>
+                <div class="formulario-item">
                     <label for="isenhaConfirmacao">Confirme sua Senha : </label>
                     <input placeholder="Digite sua senha" type="text" name="senhaConfirmacao" id="isenhaConfirmacao" required>
                 </div>
-                <div> 
-                    <input type="submit" value="Cadastrar">
+                <div class="formulario-botao"> 
+                    <input class="botao" type="submit" value="Cadastrar">
                 </div> 
             </form>
         </section>
