@@ -8,7 +8,6 @@ header{
   background-image: url(../images/pattern.png);
   background-repeat: repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   padding: 1.5rem 1rem;
   align-items: center;
   justify-content: center;
