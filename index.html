@@ -1,108 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CodeKids, a principal plataforma educativa brasileira, oferece uma introdução cativante à programação para crianças. Explore jogos interativos, aulas em vídeo envolventes e uma abordagem lúdica para inspirar e capacitar jovens mentes para o futuro digital."
+    />
+    <meta
+      name="keywords"
+      content="CodeKids, programação para crianças, jogos educativos, aulas em vídeo, educação digital, aprendizado divertido, desenvolvimento infantil, tecnologia para crianças."
+    />
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/index.css">
-
-  <title>Empresa</title>
-</head>
-
-<body>
-  <!-- Navbar -->
-    <nav class="menu">
-        <a href="index.html" class="menu__logo">
-          <img src="assets/images/logo.png" alt="Logotipo" class="menu__logo-image"/>
-        </a>
-        <div class="menu__links">
-          <a href="jogos/jogos.html" class="menu__link">Jogar</a>
-          <a href="videoAula/videoAula.html" class="menu__link">Assistir</a>
-          <a href="quemSomos/quemSomos.html" class="menu__link">Sobre</a>
-          <a href="login/login.html" class="menu__link">Entrar</a>
-        </div>
+    <title>CodeKids</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="menu navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="index.html" class="menu__logo navbar-brand">
+        <img
+          src="assets/images/logo.png"
+          alt="Logotipo"
+          class="menu__logo-image navbar__logo-image"
+        />
+      </a>
+      <!-- Menu -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <section class="collapse navbar-collapse menu__links" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link menu__link" href="jogos.html">Jogar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="videoaula.html">Assistir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="login.html">Entrar</a>
+          </li>
+        </ul>
+      </section>
     </nav>
 
     <header>
-        <div id="cabecalho">
-          <h1>CodeKids</h1>
-          <p id="texto__cabecalho">O maior site para ensino de programação para crianças do Brasil!</p>
-        </div>
-        <div id="about">
-          <h2>Quem somos?</h2>
-          <p id="description">A nossa missão é inspirar e capacitar as mentes jovens para o futuro, proporcionando uma introdução divertida e educativa à programação. Na CodeKids, acreditamos que cada criança tem o potencial de se tornar um criador e solucionador de problemas no mundo digital, e buscamos cultivar essa paixão desde cedo.</p>
-        </div>
+      <section class="texto__cabecalho">
+        <h1>CodeKids</h1>
+        <p>O maior site para ensino de programação para crianças do Brasil!</p>
+        <button>Comece Agora</button>
+      </section>
+      <div class="imagem__cabecalho">
+        <img src="assets/images/header.png" alt="" />
+      </div>
     </header>
-    
+
     <main>
-      <div class="content">
-        <section class="white">
+      <section id="about">
+        <h2>Quem somos?</h2>
+        <p>
+          A nossa missão é inspirar e capacitar as mentes jovens para o futuro,
+          proporcionando uma introdução divertida e educativa à programação. Na
+          CodeKids, acreditamos que cada criança tem o potencial de se tornar um
+          criador e solucionador de problemas no mundo digital, e buscamos
+          cultivar essa paixão desde cedo.
+        </p>
+      </section>
+      <article class="content">
+        <section class="content__playing">
           <div id="playing"></div>
           <div class="text">
             <h2>Aprenda jogando</h2>
-            <p>Sabia que é possível aprender programação jogando? Aqui nessa seção você vai aprender a programar de uma forma diferete, a partir de jogos que vão te desafiar</p>
+            <p>
+              Sabia que é possível aprender programação jogando? Aqui nessa
+              seção você vai aprender a programar de uma forma diferete, a
+              partir de jogos que vão te desafiar
+            </p>
           </div>
         </section>
-        <section class="yellow">
+        <section class="content__watching">
           <div class="text">
             <h2>Vídeos Aulas</h2>
-              <p>Aqui nessa seção você vai encontrar vídeos  aulas sobre diversos assuntos de programação. Venha maratonar!</p>
+            <p>
+              Aqui nessa seção você vai encontrar vídeos aulas sobre diversos
+              assuntos de programação. Venha maratonar!
+            </p>
           </div>
           <div id="watching"></div>
         </section>
         <section class="cadastro">
-          <p>Gostou de tudo o que viu? Junte-se a gente fazendo seu login ou criando seu cadastro</p>
+          <p>
+            Curtiu tudo que encontrou por aqui? Junte-se a nós ao fazer login ou
+            criar sua conta agora.
+          </p>
           <button>Login ou Cadastrar</button>
         </section>
-      </div>
+      </article>
     </main>
 
-    <footer class="footer container">
+    <footer>
+      <!-- Logo -->
       <div class="empresa">
         <div class="footer__logo">
-          <img src="assets/images/logo.png" alt="">
+          <img src="assets/images/logo.png" alt="" />
           <p>CodeKids</p>
         </div>
+        <!-- Redes Sociais -->
         <div class="footer__social">
           <p>Nossas redes sociais</p>
           <div class="social">
-            <a href="https://www.facebook.com/" class="footer__social-link">
+            <a
+              href="https://www.facebook.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
               <img src="assets/images/facebook.png" alt="Facebook" />
             </a>
-            <a href="https://twitter.com/" class="footer__social-link">
+            <a
+              href="https://twitter.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
               <img src="assets/images/twitter.png" alt="Twitter" />
             </a>
-            <a href="https://www.instagram.com/" class="footer__social-link">
+            <a
+              href="https://www.instagram.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
               <img src="assets/images/instagram.png" alt="Instagram" />
             </a>
-            <a href="https://www.youtube.com/" class="footer__social-link">
+            <a
+              href="https://www.youtube.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
               <img src="assets/images/youtube.png" alt="Youtube" />
             </a>
           </div>
         </div>
       </div>
-
+      <!-- Links do Rodapé -->
       <div class="sections">
-        <div>Seções
-          <hr width="100%">
-          <p><a href="jogos/jogos.html" class="footer__link">Aprenda jogando</a></p>
-          <p><a href="videoAula/videoAula.html" class="footer__link">Vídeo Aula</a></p>
+        <div>
+          Seções
+          <hr width="100%" />
+          <p><a href="#playing" class="footer__link">Aprenda jogando</a></p>
+          <p><a href="#watching" class="footer__link">Vídeo Aula</a></p>
+        </div>
+        <div>
+          Institucional
+          <hr width="100%" />
+          <p><a href="#about" class="footer__link">Quem somos</a></p>
+        </div>
+        <div>
+          Conta
+          <hr width="100%" />
+          <p><a href="login.html" class="footer__link">Criar Conta</a></p>
+          <p><a href="login.html" class="footer__link">Minha Conta</a></p>
+        </div>
       </div>
-      <div>Institucional
-        <hr width="100%">
-        <p><a href="quemSomos/quemSomos.html" class="footer__link">Quem somos</a></p>
-      </div>
-      <div>Conta
-        <hr width="100%">
-        <p><a href="login/login.html" class="footer__link">Criar Conta</a></p>
-      </div>
-    </div>
     </footer>
-</body>
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
 </html>
