@@ -48,6 +48,17 @@ body {
   box-shadow: var(--shadow);
 }
 
+.menu__logo-bloco {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Luckiest Guy";
+  color: var(--text-color);
+}
+
+.menu__logo-bloco > p {
+  margin: 0 8px;}
+
 .menu__logo {
   max-width: 160px;
 }
