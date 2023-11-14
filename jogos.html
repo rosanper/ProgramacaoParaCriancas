@@ -1,152 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/jogos.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CodeKids, a principal plataforma educativa brasileira, oferece uma introdução cativante à programação para crianças. Explore jogos interativos, aulas em vídeo envolventes e uma abordagem lúdica para inspirar e capacitar jovens mentes para o futuro digital."
+    />
+    <meta
+      name="keywords"
+      content="CodeKids, programação para crianças, jogos educativos, aulas em vídeo, educação digital, aprendizado divertido, desenvolvimento infantil, tecnologia para crianças."
+    />
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/jogos.css">
 
     <title>CodeKids/Jogos</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <nav class="menu">
-                <a href="../index.html" class="menu__logo">
-                  <img src="images/logo.png" alt="Logotipo" class="menu__logo-image"/>
-                </a>
-                <div class="menu__links">
-                  <a href="jogos.html" class="menu__link">Jogar</a>
-                  <a href="../videoAula/videoAula.html" class="menu__link">Assistir</a>
-                  <a href="../quemSomos/quemSomos.html" class="menu__link">Sobre</a>
-                  <a href="../login/login.html" class="menu__link">Entrar</a>
-                </div>
-            </nav>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="menu navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="index.html" class="menu__logo-bloco menu__logo navbar-brand">
+        <img
+          src="assets/images/global/logo.png"
+          alt="Logotipo"
+          class="menu__logo-image navbar__logo-image"
+        />
+        <p>CodeKids</p>
+      </a>
+
+      <!-- Menu -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <section class="collapse navbar-collapse menu__links" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link menu__link" href="jogos.html">Jogar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="videoAula.html">Assistir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="quemSomos.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="login.html">Entrar</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
     
 
     <main>
         <section class="descricao" >
-            <h2>Aprenda Jogando</h2>  
+            <h1>Aprenda Jogando</h1>  
             <p>Nada de assistir vídeos ou ler textos, aqui você jovem desenvolvedor vai aprender jogando. Sececionamos os melhores jogos que além de te desafiar, vão fazer você aprendder e testar seus conhecimentos em lógica e em programação. Vocês estão prontos para encarar esse desafio?</p>
         </section>
-        <section>
+        <section class="destaque">
             <div class="card-destaque">
-                <img class="card-destaque-img" src="images/codemonkey.png" alt="">
+                <img class="card-destaque-img" src="assets/images/jogos/codemonkey.png" alt="">
                 <div class="card-destaque-conteudo">
-                    <h5>Codemonkey</h5>
+                    <h5 class="card-title">Codemonkey</h5>
                     <p>O jogo ensina a codificar, utilizando uma linguagem real de programação, o CoffeeScript. A partir do aprendizado, o usuário irá descobrir como criar seus próprios jogos para a web com HTML 5.</p>
-                    <a href="https://www.codemonkey.com/" target="_blank" class="btn btn-primary">Jogar</a>
+                    <a href="https://www.codemonkey.com/" target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
                 </div>
             </div>
         </section>
         <section class="cards">
             <div class="cards-line">
                 <div class="card" style="width: 18rem;">
-                    <img src="images/Cidade do Algoritmo.png" class="card-img-top" alt="...">
+                    <img src="assets/images/jogos/Cidade do Algoritmo.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Cidade do Algoritmo</h5>
                       <p class="card-text">Ele é bem introdutório, bom para quem está começando a programar e ainda precisa entender as lógicas da programação. No jogo, os pássaros são os personagens principais e que desenvolvem as missões a partir dos comandos básicos. Então, a compreensão da sequência desses comandos é fundamental para a criação da lógica no jogo e, claro, também no dia a dia da área de programação. </p>
-                      <a href="https://play.google.com/store/apps/details?id=air.MusterenGames.ElHarezmiCoding&hl=pt_BR&gl=US" target="_blank" class="btn btn-primary">Jogar</a>
+                      <a href="https://play.google.com/store/apps/details?id=air.MusterenGames.ElHarezmiCoding&hl=pt_BR&gl=US" target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/brain code.png" class="card-img-top" alt="...">
+                    <img src="assets/images/jogos/brain code.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Brain code</h5>
                       <p class="card-text">Bem-vindo ao Brain Code, uma coleção de quebra-cabeças desafiadores que testará todo o poder do seu cérebro! Com 50 níveis únicos, você precisará usar sua criatividade, atenção e habilidades de resolução de problemas para resolver todos os quebra-cabeças.</p>
-                      <a href="https://play.google.com/store/apps/details?id=com.kk.braincode&hl=pt_BR&gl=US" target="_blank" class="btn btn-primary">Jogar</a>
+                      <a href="https://play.google.com/store/apps/details?id=com.kk.braincode&hl=pt_BR&gl=US" target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/codecombat-header.jpg" class="card-img-top" alt="...">
+                    <img src="assets/images/jogos/codecombat-header.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Code Combat</h5>
                       <p class="card-text">São jogos com introdução bem amigável indicados para os iniciantes na programação. A didática indica uma curva de aprendizado, iniciando pelos conceitos e comandos básicos de lógica. Dentro do contexto, é possível descobrir o mundo de Python, JavaScript, CoffeeScript e Lua. Então, é possível se familiarizar com os principais conceitos de forma bem dinâmica e interessante.</p>
-                      <a href="https://codecombat.com/" target="_blank" class="btn btn-primary">Jogar</a>
+                      <a href="https://codecombat.com/" target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/elevator-saga.jpg" class="card-img-top" alt="...">
+                    <img src="assets/images/jogos/elevator-saga.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Elevator Saga</h5>
                       <p class="card-text">Elevator Saga não é destinado a quem quer aprender, mas a quem deseja aprimorar seus conhecimentos de Javascript em um jogo de interface simples, mas desafiador. A meta aqui é controlar um elevador e fazê-lo transportar seus usuários da forma mais eficiente possível.</p>
-                      <a href="https://play.elevatorsaga.com/" target="_blank" class="btn btn-primary">Jogar</a>
+                      <a href="https://play.elevatorsaga.com/" target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/flexbox froggy.jpg" class="card-img-top" alt="...">
+                    <img src="assets/images/jogos/flexbox froggy.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">FLEXBOX FROGGY</h5>
                       <p class="card-text">Esse jogo é especificamente destinado a quem deseja aprender como o conceito de flexbox funciona em CSS. Flexbox Froggy torna a assimilação do recurso mais fácil com um simpático sapinho e seus amigos. Ao longo de 24 níveis diferentes, será necessário meter a mão no código para resolver os desafios propostos.</p>
-                      <a href="https://flexboxfroggy.com/" target="_blank" class="btn btn-primary">Jogar</a>
+                      <a href="https://flexboxfroggy.com/" target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/Human Resource Machine.jpg" class="card-img-top" alt="...">
+                    <img src="assets/images/jogos/Human Resource Machine.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Human Resource Machine</h5>
                       <p class="card-text">Com personagens fofos, senso de humor de escritório e um sistema de edição de lógica que não mexe com código, Human Resource Machine esconde sua complexidade a um primeiro olhar. No papel de um funcionário que precisa administrar o fluxo de correspondência na empresa, o jogador precisará utilizar 11 comandos diferentes , entre operadores matemáticos e lógicos, para resolver os desafios.</p>
-                      <a href="https://tomorrowcorporation.com/humanresourcemachine" target="_blank" class="btn btn-primary">Jogar</a>
+                      <a href="https://tomorrowcorporation.com/humanresourcemachine" target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     
-    <footer class="footer container">
-        <div class="empresa">
-          <div class="footer__logo">
-            <img src="assets/images/logo.png" alt="">
-            <p>CodeKids</p>
+    <footer>
+      <!-- Logo -->
+      <div class="empresa">
+        <div class="footer__logo">
+          <img src="assets/images/global/logo.png" alt="Logotipo" />
+          <p>CodeKids</p>
+        </div>
+        <!-- Redes Sociais -->
+        <div class="footer__social">
+          <p>Nossas redes sociais</p>
+          <div class="social">
+            <a
+              href="https://www.facebook.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/facebook.png" alt="Facebook" />
+            </a>
+            <a
+              href="https://twitter.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/twitter.png" alt="Twitter" />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/instagram.png" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/youtube.png" alt="Youtube" />
+            </a>
           </div>
-          <div class="footer__social">
-            <p>Nossas redes sociais</p>
-            <div class="social">
-              <a href="https://www.facebook.com/" class="footer__social-link">
-                <img src="images/facebook.png" alt="Facebook" />
-              </a>
-              <a href="https://twitter.com/" class="footer__social-link">
-                <img src="images/twitter.png" alt="Twitter" />
-              </a>
-              <a href="https://www.instagram.com/" class="footer__social-link">
-                <img src="images/instagram.png" alt="Instagram" />
-              </a>
-              <a href="https://www.youtube.com/" class="footer__social-link">
-                <img src="images/youtube.png" alt="Youtube" />
-              </a>
-            </div>
-          </div>
         </div>
-  
-        <div class="sections">
-          <div>Seções
-            <hr width="100%">
-            <p><a href="jogos.html" class="footer__link">Aprenda jogando</a></p>
-            <p><a href="../videoAula/videoAula.html" class="footer__link">Vídeo Aula</a></p>
+      </div>
+      <!-- Links do Rodapé -->
+      <div class="sections">
+        <div>
+          Seções
+          <hr width="100%" />
+          <p><a href="jogos.html" class="footer__link">Aprenda jogando</a></p>
+          <p><a href="videoAula.html" class="footer__link">Vídeo Aula</a></p>
         </div>
-        <div>Institucional
-          <hr width="100%">
-          <p><a href="../quemSomos/quemSomos.html" class="footer__link">Quem somos</a></p>
+        <div>
+          Institucional
+          <hr width="100%" />
+          <p><a href="quemSomos.html" class="footer__link">Quem somos</a></p>
         </div>
-        <div>Conta
-          <hr width="100%">
-          <p><a href="../login/login.html" class="footer__link">Criar Conta</a></p>
+        <div>
+          Conta
+          <hr width="100%" />
+          <p><a href="login.html" class="footer__link">Criar Conta</a></p>
+          <p><a href="login.html" class="footer__link">Minha Conta</a></p>
         </div>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
