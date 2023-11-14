@@ -5,7 +5,7 @@ header{
   text-align: left;
   display: flex;
   flex-direction: row;
-  background-image: url(../images/pattern.png);
+  background-image: url(../images/home/pattern.png);
   background-repeat: repeat;
   background-size: cover;
   padding: 1.5rem 1rem;
@@ -90,7 +90,7 @@ header{
 }
 
 #playing{
-  background-image: url(../images/jogando.jpg);
+  background-image: url(../images/home/jogando.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -116,7 +116,7 @@ header{
 }
 
 #watching{
-  background-image: url(../images/assistindo.jpg);
+  background-image: url(../images/home/assistindo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
