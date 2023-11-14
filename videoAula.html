@@ -1,45 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/videoAula.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CodeKids, a principal plataforma educativa brasileira, oferece uma introdução cativante à programação para crianças. Explore jogos interativos, aulas em vídeo envolventes e uma abordagem lúdica para inspirar e capacitar jovens mentes para o futuro digital."
+    />
+    <meta
+      name="keywords"
+      content="CodeKids, programação para crianças, jogos educativos, aulas em vídeo, educação digital, aprendizado divertido, desenvolvimento infantil, tecnologia para crianças."
+    />
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/videoAula.css">
 
     <title>CodeKids/Video-Aula</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <nav class="menu">
-                <a href="../index.html" class="menu__logo">
-                  <img src="images/logo.png" alt="Logotipo" class="menu__logo-image"/>
-                </a>
-                <div class="menu__links">
-                  <a href="../jogos/jogos.html" class="menu__link">Jogar</a>
-                  <a href="videoAula.html" class="menu__link">Assistir</a>
-                  <a href="../quemSomos/quemSomos.html" class="menu__link">Sobre</a>
-                  <a href="../login/login.html" class="menu__link">Entrar</a>
-                </div>
-            </nav>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="menu navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="index.html" class="menu__logo-bloco menu__logo navbar-brand">
+        <img
+          src="assets/images/global/logo.png"
+          alt="Logotipo"
+          class="menu__logo-image navbar__logo-image"
+        />
+        <p>CodeKids</p>
+      </a>
+
+      <!-- Menu -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <section class="collapse navbar-collapse menu__links" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link menu__link" href="jogos.html">Jogar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="videoAula.html">Assistir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="quemSomos.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu__link" href="login.html">Entrar</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
     
 
     <main>
         <section class="descricao" >
-            <h2>video aula</h2>  
+            <h1>video aula</h1>  
             <p>Olá jovem desenvolvedor, aqui nessa página você vai encontrar um monte de vídeo que vai te ensinar a programar e se tornar um grande programador.</p>
         </section>
-        <section class="">
+        <section class="carousel">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -48,27 +95,27 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="images/Como ensinar linguagem de programação para uma criança.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="assets/images/videoAula/Como ensinar linguagem de programação para uma criança.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block carousel-background">
                       <h5>Como ensinar linguagem de programação para uma criança</h5>
                       <p>Vamos fazer um sanduiche? venha aprender a como programação te ajuda em tarefas simples do dia a dia</p>
-                      <a href="https://www.youtube.com/watch?v=pdhqwbUWf4U&t=1s" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=pdhqwbUWf4U&t=1s" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="images/PROGRAMAÇÃO para crianças Conceitos básicos Parte 1.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="assets/images/videoAula/PROGRAMAÇÃO para crianças Conceitos básicos Parte 1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block carousel-background">
                       <h5>PROGRAMAÇÃO para crianças Conceitos básicos Parte 1</h5>
                       <p>Você sabe o que é programação? Venha aprender aqui nesse vídeo tudo sobre programação</p>
-                      <a href="https://www.youtube.com/watch?v=tRcr4vtV-4o" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=tRcr4vtV-4o" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="images/PROGRAMAÇÃO para crianças Programação em blocos Parte 2.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="assets/images/videoAula/PROGRAMAÇÃO para crianças Programação em blocos Parte 2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block carousel-background">
                       <h5>PROGRAMAÇÃO para crianças Conceitos básicos Parte 2</h5>
                       <p>Aprenda nesse vídeo como funciona a programação através de comandos em blocos</p>
-                      <a href="https://www.youtube.com/watch?v=CANYM34cIuQ" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=CANYM34cIuQ" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                 </div>
@@ -85,43 +132,43 @@
         <section class="cards">
             <div class="cards-line">
                 <div class="card" style="width: 18rem;">
-                    <img src="images/O MÍNIMO QUE VOCÊ PRECISA SABER ANTES DE PROGRAMAR!.png" class="card-img-top" alt="...">
+                    <img src="assets/images/videoAula/O MÍNIMO QUE VOCÊ PRECISA SABER ANTES DE PROGRAMAR!.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">O MÍNIMO QUE VOCÊ PRECISA SABER ANTES DE PROGRAMAR!</h5>
                       <p class="card-text">Quer se tornar um programador e não sabe como começar? Veja nesse vídeo o que você precissa saber antes de se aventurar nesse novo mundo</p>
-                      <a href="https://www.youtube.com/watch?v=BTENKdRVS2U" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=BTENKdRVS2U" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;">
-                    <img src="images/PROGRAMAÇÃO para crianças Conceitos básicos Parte 1.png" class="card-img-top" alt="...">
+                    <img src="assets/images/videoAula/PROGRAMAÇÃO para crianças Conceitos básicos Parte 1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Conceitos básicos</h5>
                       <p class="card-text">Venha aprender aqui nesse vídeo sobre o que é programação e alguns conceitos básicos</p>
-                      <a href="https://www.youtube.com/watch?v=tRcr4vtV-4o" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=tRcr4vtV-4o" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;">
-                    <img src="images/PROGRAMAÇÃO para crianças Programação em blocos Parte 2.png" class="card-img-top" alt="...">
+                    <img src="assets/images/videoAula/PROGRAMAÇÃO para crianças Programação em blocos Parte 2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Programação em blocos</h5>
                       <p class="card-text">Nesse vídeo você vai aprender conceitos básicos de programação através de comandos em blocos</p>
-                      <a href="https://www.youtube.com/watch?v=CANYM34cIuQ" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=CANYM34cIuQ" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;">
-                    <img src="images/Como ensinar linguagem de programação para uma criança.png" class="card-img-top" alt="...">
+                    <img src="assets/images/videoAula/Como ensinar linguagem de programação para uma criança.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Como fazer um sanduiche</h5>
                       <p class="card-text">Aprender lógica computacional utilizando tarefas simples do dia a dia como fazer um simples sanduiche</p>
-                      <a href="https://www.youtube.com/watch?v=pdhqwbUWf4U&t=1s" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=pdhqwbUWf4U&t=1s" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;">
-                    <img src="images/Python para Crianças.png" class="card-img-top" alt="...">
+                    <img src="assets/images/videoAula/Python para Crianças.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Python para Crianças</h5>
                       <p class="card-text">venha aprender a programar em Python!!!</p>
-                      <a href="https://www.youtube.com/watch?v=DLyzcGYHVpQ&t=809s" target="_blank" class="btn btn-primary">Assistir</a>
+                      <a href="https://www.youtube.com/watch?v=DLyzcGYHVpQ&t=809s" target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                     </div>
                   </div>
                   </div>
@@ -129,50 +176,77 @@
         </section>
     </main>
     
-    <footer class="footer container">
-        <div class="empresa">
-          <div class="footer__logo">
-            <img src="assets/images/logo.png" alt="">
-            <p>CodeKids</p>
+    <footer>
+      <!-- Logo -->
+      <div class="empresa">
+        <div class="footer__logo">
+          <img src="assets/images/global/logo.png" alt="Logotipo" />
+          <p>CodeKids</p>
+        </div>
+        <!-- Redes Sociais -->
+        <div class="footer__social">
+          <p>Nossas redes sociais</p>
+          <div class="social">
+            <a
+              href="https://www.facebook.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/facebook.png" alt="Facebook" />
+            </a>
+            <a
+              href="https://twitter.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/twitter.png" alt="Twitter" />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/instagram.png" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
+              <img src="assets/images/global/youtube.png" alt="Youtube" />
+            </a>
           </div>
-          <div class="footer__social">
-            <p>Nossas redes sociais</p>
-            <div class="social">
-              <a href="https://www.facebook.com/" class="footer__social-link">
-                <img src="images/facebook.png" alt="Facebook" />
-              </a>
-              <a href="https://twitter.com/" class="footer__social-link">
-                <img src="images/twitter.png" alt="Twitter" />
-              </a>
-              <a href="https://www.instagram.com/" class="footer__social-link">
-                <img src="images/instagram.png" alt="Instagram" />
-              </a>
-              <a href="https://www.youtube.com/" class="footer__social-link">
-                <img src="images/youtube.png" alt="Youtube" />
-              </a>
-            </div>
-          </div>
         </div>
-  
-        <div class="sections">
-          <div>Seções
-            <hr width="100%">
-            <p><a href="../jogos/jogos.html" class="footer__link">Aprenda jogando</a></p>
-            <p><a href="videoAula.html" class="footer__link">Vídeo Aula</a></p>
+      </div>
+      <!-- Links do Rodapé -->
+      <div class="sections">
+        <div>
+          Seções
+          <hr width="100%" />
+          <p><a href="jogos.html" class="footer__link">Aprenda jogando</a></p>
+          <p><a href="videoAula.html" class="footer__link">Vídeo Aula</a></p>
         </div>
-        <div>Institucional
-          <hr width="100%">
-          <p><a href="../quemSomos/quemSomos.html" class="footer__link">Quem somos</a></p>
+        <div>
+          Institucional
+          <hr width="100%" />
+          <p><a href="quemSomos.html" class="footer__link">Quem somos</a></p>
         </div>
-        <div>Conta
-          <hr width="100%">
-          <p><a href="../login/login.html" class="footer__link">Criar Conta</a></p>
+        <div>
+          Conta
+          <hr width="100%" />
+          <p><a href="login.html" class="footer__link">Criar Conta</a></p>
+          <p><a href="login.html" class="footer__link">Minha Conta</a></p>
         </div>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
