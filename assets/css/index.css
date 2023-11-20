@@ -11,6 +11,7 @@ header{
   padding: 1.5rem 1rem;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--shadow-inset);
 }
 
 .texto__cabecalho > h1{
@@ -41,7 +42,7 @@ header{
 
 .texto__cabecalho > button{
   background: var(--btn-bg-color-gradient);
-  border-radius: 5px;
+  border-radius: 25px;
   border: none;
   text-transform: uppercase;
   width: 9rem;
@@ -94,6 +95,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  border-radius: 10px;
   height: 17rem;
   width: 23rem;
 }
@@ -120,6 +122,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  border-radius: 10px;
   height: 17rem;
   width: 23rem;
 }
@@ -132,7 +135,11 @@ header{
   text-align: justify;
   padding: 1.5rem;
   gap: 1rem;
-  height: 10rem;
+  height: 15rem;
+}
+
+.cadastro > p{
+  padding: 1rem;
 }
 
 .cadastro > button{
@@ -140,7 +147,7 @@ header{
   height: 3rem;
   background-color: var(--palette-orange);
   background: var(--btn-bg-color-gradient);
-  border-radius: 5px;
+  border-radius: 25px;
   border: none;
   text-transform: uppercase;
   animation: wiggle 2.2s linear infinite;
