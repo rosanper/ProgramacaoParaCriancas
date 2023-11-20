@@ -1,104 +1,144 @@
-  main {
-    margin: 100px;
-  }
+main {
+  margin: 100px;
+}
 
-  h1 {
-    font-family: "Luckiest Guy";
-    /* color: var(--palette-blue); */
-    text-align: center;
-    margin: 30px;
-  }
+h1 {
+  font-family: "Luckiest Guy";
+  /* color: var(--palette-blue); */
+  text-align: center;
+  margin: 30px;
+}
 
-  h2 {
-    /* color: var(--palette-blue); */
-    font-family: "Luckiest Guy";
-    text-align: center;
-    margin-bottom: 20px;
-  }
+h2 {
+  /* color: var(--palette-blue); */
+  font-family: "Luckiest Guy";
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .membros {
-    margin-top: 100px;
-    text-align: center;
-  }
-  
+.membros {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.cards-membros {
+  display: flex;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+/* Efeito card virando */
+
+/* Mouse no primeiro card, os dois últimos viram */
+.cards-membros:has(.card-membro:first-child:hover)
+  .card-membro:nth-child(n + 2) {
+  transform: rotateY(-45deg);
+}
+/* Mouse no último card, os dois primeiros viram */
+.cards-membros:has(.card-membro:last-child:hover)
+  .card-membro:nth-child(-n + 2) {
+  transform: rotateY(45deg);
+}
+/* Mouse no meio card, os dois da laterais viram */
+.cards-membros:has(.card-membro:nth-child(2):hover) .card-membro:last-child {
+  transform: rotateY(-45deg);
+}
+.cards-membros:has(.card-membro:nth-child(2):hover) .card-membro:first-child {
+  transform: rotateY(45deg);
+}
+
+.card-membro {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--palette-orange);
+  border-radius: 10px;
+  transition: transform 1s ease-in-out;
+}
+
+.card-membro > p{
+  text-align: justify;
+  padding: .5rem;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 16px 0;
+}
+
+.card-titulo {
+  margin-bottom: 16px;
+}
+
+.card-membro a img {
+  width: 50px;
+  height: 50px;
+}
+
+article {
+  margin-bottom: 30px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .cards-membros {
     display: flex;
-  }
-
-  .card-membro {
-    margin: 30px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 16px 0;
-  }
-
-  .card-titulo {
-    margin-bottom: 16px;
   }
 
   .card-membro a img {
     width: 50px;
     height: 50px;
-  }
-
-  article {
     margin-bottom: 30px;
   }
-  
-  /* Tablet */
-  @media screen and (min-width: 768px) and (max-width: 1023px){
-    .cards-membros {
-      display: flex;
-      flex-direction: column;
-    }
 
-    .card-membro a img {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 30px;
-    }
-
-    .card-membro {
-      border-bottom: 2px dashed var(--palette-blue);
-    }
-
-    .card-membro:last-child {
-      border-bottom: none;
-    }
-  }
-  
-  /* Telas maiores */
-  @media screen and (min-width: 1024px){
-    
+  .card-membro {
+    border-bottom: 2px dashed var(--palette-blue);
   }
 
-  /* Telas menores */
-  @media screen and (max-width: 768px){
-    .cards-membros {
-      display: flex;
-      flex-direction: column;
-    }
+  .card-membro:last-child {
+    border-bottom: none;
+  }
+}
 
-    .card-membro a img {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 30px;
-    }
+/* Telas maiores */
+@media screen and (min-width: 1024px) {
+}
 
-    .card-membro {
-      border-bottom: 2px dashed var(--palette-blue);
-    }
-
-    .card-membro:last-child {
-      border-bottom: none;
-    }
+/* Telas menores */
+@media screen and (max-width: 768px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
+  article > p{
+    width: 300px;
+  }
+
+  .cards-membros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-membro a img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .card-membro {
+    border-bottom: 2px dashed var(--palette-blue);
+    width: 250px;
+  }
+
+  .card-membro:last-child {
+    border-bottom: none;
+  }
+}
