@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-        <!-- Metadados -->
+  <head>
+    <!-- Metadados -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -33,12 +33,12 @@
       crossorigin="anonymous"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
 
     <title>CodeKids/Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="menu navbar navbar-expand-lg navbar-dark bg-dark">
       <a href="index.html" class="menu__logo-bloco menu__logo navbar-brand">
@@ -79,67 +79,113 @@
         </ul>
       </section>
     </nav>
-    
 
     <main>
-
-        <section class="formulario-box">
-            <div class="formulario-nome">
-              <h2>Faça seu Login</h2>
-            </div>  
-            <form action="">
-                <div class="formulario-item">
-                    <label for="iemail">e-mail:</label> 
-                    <input placeholder="Digite seu e-mail" type="email" name="e-mail" id="iemail" required>
-                </div>
-                <div class="formulario-item">
-                    <label for="isenha">Senha: </label>
-                    <input placeholder="Digite sua senha" type="text" name="senha" id="isenha" required>
-                </div>
-                <div class="formulario-botao"> 
-                    <input class="botao" type="submit" value="Fazer login">
-                </div> 
-            </form>
-        </section>
-        <div>
-            <p>ou</p>
+      <section class="formulario-box">
+        <div class="formulario-nome">
+          <h2>Faça seu Login</h2>
         </div>
-        <section class="formulario-box">
-            <div class="formulario-nome">
-              <h2>Faça seu cadastro</h2>
-            </div>  
-            <form action="">
-                <div class="formulario-item">
-                    <label for="iemail">e-mail:</label> 
-                    <input placeholder="Digite seu e-mail" type="email" name="e-mail" id="iemail" required>
-                </div>
-                <div class="formulario-item">
-                    <label for="inome">Nome:</label> 
-                    <input placeholder="Digite seu nome" type="text" name="nome" id="inome" required>
-                </div>
-                <div class="formulario-item">
-                    <label for="isobrenome">Sobrenome: </label>
-                    <input placeholder="Digite seu sobrenome" type="text" name="sobrenome" id="isobrenome">
-                </div>
-                <div class="formulario-item">
-                    <label for="idataNascimento">Data de Nascimento</label>
-                    <input type="date" name="dataNascimento" id="idataNascimento">
-                </div>
-                <div class="formulario-item">
-                    <label for="isenha">Senha: </label>
-                    <input placeholder="Digite sua senha" type="text" name="senha" id="isenha" required>
-                </div>
-                <div class="formulario-item">
-                    <label for="isenhaConfirmacao">Confirme sua Senha : </label>
-                    <input placeholder="Digite sua senha" type="text" name="senhaConfirmacao" id="isenhaConfirmacao" required>
-                </div>
-                <div class="formulario-botao"> 
-                    <input class="botao" type="submit" value="Cadastrar">
-                </div> 
-            </form>
-        </section>
+        <form action="">
+          <div class="formulario-item">
+            <label for="iemail">e-mail:</label>
+            <input
+              placeholder="Digite seu e-mail"
+              type="email"
+              name="e-mail"
+              id="iemail"
+              required
+            />
+          </div>
+          <div class="formulario-item">
+            <label for="isenha">Senha: </label>
+            <input
+              placeholder="Digite sua senha"
+              type="password"
+              name="senha"
+              id="isenha"
+              required
+            />
+          </div>
+          <div class="formulario-botao">
+            <button id="logar" type="submit">Fazer Login</button>
+          </div>
+        </form>
+      </section>
+      <div>
+        <h3>ou</h3>
+      </div>
+      <section class="formulario-box">
+        <div class="formulario-nome">
+          <h2>Faça seu cadastro</h2>
+        </div>
+        <form action="">
+          <div class="formulario-item">
+            <label for="nome">Nome:</label>
+            <input
+              placeholder="Digite seu nome"
+              type="text"
+              name="nome"
+              id="nome"
+              required
+            />
+            <p id="username-helper" class="helper-text">Mensagem de ajuda</p>
+          </div>
+          <div class="formulario-item">
+            <label for="sobrenome">Sobrenome: </label>
+            <input
+              placeholder="Digite seu sobrenome"
+              type="text"
+              name="sobrenome"
+              id="sobrenome"
+            />
+          </div>
+          <div class="formulario-item">
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" name="dataNascimento" id="dataNascimento" />
+          </div>
+          <div class="formulario-item">
+            <label for="email">e-mail:</label>
+            <input
+              placeholder="Digite seu e-mail"
+              type="email"
+              name="e-mail"
+              id="email"
+              required
+            />
+            <p id="email-helper" class="helper-text">Mensagem de ajuda</p>
+          </div>
+          <div class="formulario-item">
+            <label for="senha">Senha: </label>
+            <input
+              placeholder="Digite sua senha"
+              type="password"
+              name="senha"
+              id="senha"
+              required
+            />
+            <p id="password-helper" class="helper-text">Mensagem de ajuda</p>
+          </div>
+          <div class="formulario-item">
+            <label for="senhaConfirmacao">Confirme sua Senha : </label>
+            <input
+              placeholder="Digite sua senha"
+              type="password"
+              name="senhaConfirmacao"
+              id="senhaConfirmacao"
+              required
+            />
+            <p id="senhaConfirmacao-helper" class="helper-text">
+              Mensagem de ajuda
+            </p>
+          </div>
+          <div class="formulario-botao">
+            <button id="cadastrar" type="submit">Cadastrar</button>
+            <button id="limpar" type="reset">Limpar</button>
+          </div>
+        </form>
+      </section>
     </main>
-    
+
     <footer>
       <!-- Logo -->
       <div class="empresa">
@@ -212,5 +258,6 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script src="assets/js/login.js"></script>
+  </body>
 </html>

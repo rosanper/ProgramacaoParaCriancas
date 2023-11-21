@@ -22,9 +22,10 @@
   --link-color: #277bc0;
   --form-bg-color: rgba(78, 65, 65, 0.06);
   --form-field-bg-color: rgba(0, 0, 0, 0.2);
-  --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+  --form-field-border: 2px solid var(--palette-orange);
   --form-field-placeholder: rgba(255, 255, 255, 0.7);
   --form-field-error: rgb(255, 76, 76);
+  --form-field-correct: 2px solid rgb(73, 161, 73);
   --footer-link-color: #fff;
 
   scroll-behavior: smooth;
