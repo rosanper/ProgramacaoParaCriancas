@@ -109,7 +109,14 @@
     }
 
     .destaque {
-      margin: 30px;
+      margin: 0px;
+      padding: 0;
+    }
+    
+    .cards{
+      margin: 0;
+      padding: 0.5rem;
+      
     }
 
     .card-destaque {
