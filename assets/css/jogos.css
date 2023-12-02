@@ -110,13 +110,12 @@
 
     .destaque {
       margin: 0px;
-      padding: 0;
+      padding: 0px;
     }
     
     .cards{
-      margin: 0;
+      margin: 0px;
       padding: 0.5rem;
-      
     }
 
     .card-destaque {
