@@ -73,6 +73,11 @@
       margin: 100px 30px;
     }
     
+    .cards{
+      margin: 0px;
+      padding: 0px;
+    }
+
     .carousel {
       display: none;
     }
