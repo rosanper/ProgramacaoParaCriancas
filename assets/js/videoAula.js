@@ -32,39 +32,34 @@ let videos =[
 ]   
 
 // Determina a quantidade de janelas no Carousel
-let qntIndicators = 2
+let qntIndicators = 3;
 
 // Criando o Carousel
-let carouselIndicators = document.getElementById('carousel-indicators')
-for (let i = 0; i < qntIndicators; i++) {
-    if(i === 0){
-        carouselIndicators.innerHTML += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${i}" class="active" aria-current="true" aria-label="Slide ${i+1}"></button>`
-    } else {
-        carouselIndicators.innerHTML += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${i}" aria-label="Slide ${i+1}"></button>`
-    }
-}
+let carouselIndicators = document.getElementById('carousel-indicators');
+let carouselInner = document.getElementById('carousel-inner');
 
-let indices = []
-for (let i = 0; i < qntIndicators; i++) {
-    let indice = 0
-    do{
-        indice = gerarInteiroAleatorio(0,videos.length)
-    } while(indices.includes(indice))
-    indices.push(indice)
-}
+// Cria uma array de índices para garantir que todos os vídeos sejam incluídos
+let indices = Array.from({ length: videos.length }, (_, index) => index);
 
-let carouselInner = document.getElementById('carousel-inner')
-for (const indice of indices) {
-    let divCarousel = document.createElement('div')
-    divCarousel.className = 'carousel-item active'
+// Embaralha a array de índices
+indices = indices.sort(() => Math.random() - 0.5);
+
+// Limita a exibição de vídeos de acordo com a qtde definida
+indices = indices.slice(0, qntIndicators);
+
+for (let i = 0; i < indices.length; i++) {
+    carouselIndicators.innerHTML += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${i}" ${i === 0 ? 'class="active"' : ''} aria-label="Slide ${i+1}"></button>`;
+
+    let divCarousel = document.createElement('div');
+    divCarousel.className = i === 0 ? 'carousel-item active' : 'carousel-item';
     divCarousel.innerHTML = `
-                            <img src=${videos[indice].img} class="d-block w-100" alt=${videos[indice].descricaoImg}>
-                            <div class="carousel-caption d-none d-md-block carousel-background">
-                            <h5>${videos[indice].titulo}</h5>
-                            <p>${videos[indice].descricao}</p>
-                            <a href=${videos[indice].link} target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
-                            </div>`
-    carouselInner.appendChild(divCarousel)
+        <img src=${videos[indices[i]].img} class="d-block w-100" alt=${videos[indices[i]].descricaoImg}>
+        <div class="carousel-caption d-none d-md-block carousel-background">
+            <h5>${videos[indices[i]].titulo}</h5>
+            <p>${videos[indices[i]].descricao}</p>
+            <a href=${videos[indices[i]].link} target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
+        </div>`;
+    carouselInner.appendChild(divCarousel);
 }
 
 // Criando os Cards
@@ -85,8 +80,8 @@ for (const video of videos) {
 }
 
 // Função para gerar número aleatório 
-function gerarInteiroAleatorio(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-}
+// function gerarInteiroAleatorio(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min) + min);
+// }
