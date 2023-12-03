@@ -1,4 +1,6 @@
-// ---------- Variáveis ----------//
+// ===== Validação do formulário ao digitar ===== //
+
+// ---------- Variáveis ---------- //
 // Nome
 let usernameInput = document.getElementById("nome");
 let usernameLabel = document.querySelector('label[for="nome"]');
@@ -18,7 +20,7 @@ let passwordHelper = document.getElementById("password-helper");
 let senhaConfirmacaoInput = document.getElementById("senhaConfirmacao");
 let senhaConfirmacaoHelper = document.getElementById("senhaConfirmacao-helper");
 
-// ---------- Funções ----------//
+// ---------- Funções ---------- //
 // Mostra campo obrigatório
 function mostrarPopup(input, label) {
   input.addEventListener("focus", () => {
@@ -51,6 +53,11 @@ function validarCampo(input, helper, mensagem, validacao) {
   });
 }
 
+// Valida se segue o formato padrão de email, sem espaços em branco, com arroba e ponto
+function validarEmailFormato(email) {
+  return /\S+@\S+\.\S+/.test(email);
+}
+
 // Valida se as senhas coincidem
 function validarSenhasIguais(senha, confirmacaoSenha) {
   return senha === confirmacaoSenha;
@@ -66,8 +73,8 @@ validarCampo(
 validarCampo(
   emailInput,
   emailHelper,
-  "O email deve conter '@' e '.com'",
-  (valor) => valor.includes("@") && valor.includes(".com")
+  "O email deve conter '@' e ' . '",
+  validarEmailFormato
 );
 
 validarCampo(
@@ -84,13 +91,66 @@ validarCampo(
   (valor) => validarSenhasIguais(valor, passwordInput.value)
 );
 
-// ------ Funcionalidade dos botões ------//
+// ========== Funcionalidade dos botões ========== //
+
+// --- Validação do formulário de cadastro ao clicar no botão --- //
+
+function validarLogin() {
+  // Limpa mensagens de erro anteriores
+  limparMensagensErro();
+
+  // Obtém os valores dos campos do formulário de login
+  let usuario = document.getElementById("iemail").value;
+  let senha = document.getElementById("isenha").value;
+
+  // Simulação de usuário cadastrado
+  const usuarioValido = "vivi@email.com";
+  const senhaValida = "senha123";
+
+  // Verifica se o usuário e a senha estão cadastrados
+  if (usuario === usuarioValido && senha === senhaValida) {
+    return true;
+  } else {
+    // Se o email ou a senha sejam diferentes do cadastro, mostra o helper
+    if (usuario !== usuarioValido) {
+      exibirMensagemErro("iemail-helper", "iemail", "E-mail não encontrado");
+      return false;
+    }
+    if (senha !== senhaValida) {
+      exibirMensagemErro("isenha-helper", "isenha", "Senha incorreta");
+      return false;
+    }
+  }
+}
+
+// Limpa mensagens de erro
+function limparMensagensErro() {
+  let mensagensErro = document.querySelectorAll(".visible");
+  mensagensErro.forEach((mensagem) => mensagem.classList.remove("visible"));
+}
+
+// Exibe mensagens de erro
+function exibirMensagemErro(helperId, inputId, mensagem) {
+  let helper = document.getElementById(helperId);
+  let input = document.getElementById(inputId);
+
+  if (helper) {
+    helper.innerText = mensagem;
+    input.classList.add("error");
+    helper.classList.add("visible");
+  }
+}
+
+// Verifica se o login está válido
 document.getElementById("logar").addEventListener("click", function (event) {
-  // TODO Adicionar validação do formulário de login ao clicar no botão
-  alert("Logando...");
+  event.preventDefault();
+  if (validarLogin()) {
+    this.form.submit();
+    alert("Logando...");
+  }
 });
 
-// Função para validar o formulário de cadastro
+// --- Validação do formulário de cadastro ao clicar no botão --- //
 
 function validarCadastro() {
   // Obtém os valores dos campos obrigatórios do formulário de cadastro
@@ -106,17 +166,12 @@ function validarCadastro() {
   }
 
   // Verifica se os campos estão preenchidos corretamente
-  // Verifica se o campo "Nome" tem pelo menos 3 caracteres
   if (nome.length < 3) return false;
 
-  // Verifica se o campo "E-mail" contém "@" e ".com"
-  if (!emailCadastro.includes("@") || !emailCadastro.includes(".com"))
-    return false;
+  if (!validarEmailFormato(emailCadastro)) return false;
 
-  // Verifica se as senhas digitadas coincidem
   if (senhaCadastro !== senhaConfirmacao) return false;
 
-  // Verifica se a senha tem pelo menos 6 caracteres
   if (senhaCadastro.length < 6) return false;
 
   // Se todas as verificações passarem, o formulário é considerado válido
@@ -129,13 +184,27 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     if (validarCadastro()) {
-      // Se a validação passar, você pode prosseguir com o envio ou outras ações
+      this.form.submit();
       alert("Cadastro válido. Enviando formulário...");
-      // Aqui você pode adicionar lógica para enviar os dados ao servidor ou realizar outras ações necessárias.
     } else {
-      // Se a validação falhar, você pode exibir mensagens de erro ou realizar outras ações necessárias.
       alert(
         "Por favor, preencha todos os campos do formulário de cadastro corretamente."
       );
     }
   });
+
+// --- Reseta CSS e mensagens de ajuda ao clicar no botão limpar --- //
+
+document.getElementById("limpar").addEventListener("click", function () {
+  // Remove as classes de estilo dos campos
+  usernameInput.classList.remove("error", "correct");
+  emailInput.classList.remove("error", "correct");
+  passwordInput.classList.remove("error", "correct");
+  senhaConfirmacaoInput.classList.remove("error", "correct");
+
+  // Remove as mensagens de ajuda visíveis
+  usernameHelper.classList.remove("visible");
+  emailHelper.classList.remove("visible");
+  passwordHelper.classList.remove("visible");
+  senhaConfirmacaoHelper.classList.remove("visible");
+});

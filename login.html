@@ -85,7 +85,7 @@
         <div class="formulario-nome">
           <h2>Faça seu Login</h2>
         </div>
-        <form action="">
+        <form method="post">
           <div class="formulario-item">
             <label for="iemail">e-mail:</label>
             <input
@@ -95,6 +95,8 @@
               id="iemail"
               required
             />
+            <p id="iemail-helper" class="helper-text">Mensagem de ajuda</p>
+            
           </div>
           <div class="formulario-item">
             <label for="isenha">Senha: </label>
@@ -105,6 +107,7 @@
               id="isenha"
               required
             />
+            <p id="isenha-helper" class="helper-text">Mensagem de ajuda</p>
           </div>
           <div class="formulario-botao">
             <button id="logar" type="submit">Fazer Login</button>
@@ -120,9 +123,9 @@
         </div>
         <form method="post">
           <div class="formulario-item">
-            <label for="nome">Nome:</label>
+            <label for="nome">Nome completo:</label>
             <input
-              placeholder="Digite seu nome"
+              placeholder="Digite seu nome completo"
               type="text"
               name="nome"
               id="nome"
@@ -130,7 +133,7 @@
             />
             <p id="username-helper" class="helper-text">Mensagem de ajuda</p>
           </div>
-          <div class="formulario-item">
+          <!-- <div class="formulario-item">
             <label for="sobrenome">Sobrenome: </label>
             <input
               placeholder="Digite seu sobrenome"
@@ -138,9 +141,9 @@
               name="sobrenome"
               id="sobrenome"
             />
-          </div>
+          </div> -->
           <div class="formulario-item">
-            <label for="dataNascimento">Data de Nascimento</label>
+            <label for="dataNascimento">Data de Nascimento:</label>
             <input type="date" name="dataNascimento" id="dataNascimento" />
           </div>
           <div class="formulario-item">
