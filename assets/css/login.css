@@ -1,3 +1,9 @@
+body{
+  background: url(../images/login/background.png);
+  background-size: contain;
+  background-attachment: fixed;
+}
+
 main {
   margin: 100px;
   display: flex;
@@ -9,6 +15,7 @@ h2,
 h3 {
   font-family: "Luckiest Guy";
   margin: 30px;
+  /* color: var(--palette-blue); */
 }
 
 .formulario-box {
@@ -20,6 +27,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   width: 600px;
+  background-color: white;
 }
 
 .formulario-item {
