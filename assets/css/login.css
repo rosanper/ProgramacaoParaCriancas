@@ -1,4 +1,4 @@
-body{
+body {
   background: url(../images/login/background.png);
   background-size: contain;
   background-attachment: fixed;
@@ -33,22 +33,30 @@ h3 {
 .formulario-item {
   display: flex;
   flex-direction: column;
-  width: 20vw;
+  width: 25vw;
   margin: 10px;
 }
 input {
   border: var(--form-field-border);
   background-color: var(--form-field-placeholder);
+  height: 2rem;
+}
+
+.formulario-botao-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .formulario-botao {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-top: 20px;
 }
 
-.formulario-botao > button {
+button {
   width: 40%;
   height: 3rem;
   background-color: var(--palette-orange);
@@ -60,7 +68,7 @@ input {
   font-weight: 300;
 }
 
-.formulario-botao > button:hover {
+button:hover {
   animation: none;
   outline: 2px solid var(--palette-orange);
   transform: scale(1.05);
@@ -101,7 +109,7 @@ label {
 }
 
 input.error {
-  border:2px solid var(--form-field-error);
+  border: 2px solid var(--form-field-error);
   background-color: #ccbbbb;
   color: #662020;
 }
