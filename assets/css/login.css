@@ -7,8 +7,9 @@ body {
 main {
   margin: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 h2,
@@ -134,6 +135,10 @@ input.correct {
 
 /* Telas menores */
 @media screen and (max-width: 620px) {
+  main{
+    /* display: flex; */
+    flex-direction: column;
+  }
   .formulario-box {
     width: 90vw;
     padding: 15px 0;
