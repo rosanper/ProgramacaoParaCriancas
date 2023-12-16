@@ -1,0 +1,35 @@
+{
+  "name": "Viviane M. O. Santos",
+  "photo": "https://avatars.githubusercontent.com/u/98031664?s=400&u=583415a1ce1270b2efe865ca377abb3615ea007a&v=4",
+  "level": "Iniciante",
+  "email": "viviane.m.oliveira.s@gmail.com",
+  "games": [
+    {
+      "img": "../images/jogos/codemonkey.png",
+      "name": "CodeMonkey",
+      "url": "https://www.codemonkey.com/"
+    },
+    {
+      "img": "../images/jogos/flexbox-froggy.jpg",
+      "name": "Flexbox Froggy",
+      "url": "https://flexboxfroggy.com/"
+    },
+    {
+      "img": "../images/jogos/Cidade-doAlgoritmo.png",
+      "name": "Cidade do Algoritmo",
+      "url": "https://play.google.com/store/apps/details?id=air.MusterenGames.ElHarezmiCoding&hl=pt_BR&gl=US"
+    }
+  ],
+  "videos": [
+    {
+      "img": "../images/videoAula/PROGRAMACAO-para-criancas-Conceitos-basicos-Parte-1.png",
+      "name": "Conceitos Básicos",
+      "url": "https://www.youtube.com/watch?v=tRcr4vtV-4o"
+    },
+    {
+      "img": "../images/videoAula/Python-para-Criancas.png",
+      "name": "Python para Crianças",
+      "url": "https://www.youtube.com/watch?v=DLyzcGYHVpQ&t=809s"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.aluno{
+    border: 1px solid var(--palette-blue);
+    margin-top: 5rem;
+    padding: 2rem;
+    width: 90vw;
+    text-align: center; 
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    border: 2px solid var(--palette-blue);
+    border-radius: 10px;
+    width: 90vw;
+}
+.acordeon{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: 1rem 0;
+    border: 1px solid var(--palette-blue);
+    border-radius: 1rem;
+    transition: .25s;
+    color: var(--palette-blue);
+    background-color: var(--palette-blue);
+}
+
+.acordeon.open,
+.acordeon:hover{
+    background-color: var(--palette-blue);
+    border-color: var(--palette-blue);
+}
+
+.acordeon .trigger{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+.acordeon .trigger h2{
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.acordeon .trigger:hover{
+  cursor: pointer;  
+}
+
+.acordeon .trigger::after{
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/perfil/icons/arrow.svg);
+    transition: .25s;
+}
+
+.acordeon.open .trigger::after{
+    transform: rotate(180deg);
+}
+
+.acordeon .content{
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.acordeon.open .content{
+    display: block;
+    padding: 0 1rem 1rem 2rem;
+    height: auto;
+    opacity: 1;
+}
