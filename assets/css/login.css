@@ -57,7 +57,7 @@ input {
   padding-top: 20px;
 }
 
-button {
+.botoes {
   width: 40%;
   height: 3rem;
   background-color: var(--palette-orange);
