@@ -27,35 +27,30 @@ h2 {
 
 .cards-membros {
   display: flex;
+  justify-content: space-evenly;
   perspective: 2000px;
   perspective-origin: top;
 }
 
 /* Efeito card virando */
 
-/* Mouse no primeiro card, os dois últimos viram */
-.cards-membros:has(.card-membro:first-child:hover)
-  .card-membro:nth-child(n + 2) {
+/* Mouse no primeiro card, o segundo vira */
+.cards-membros:has(.card-membro:nth-child(1):hover)
+  .card-membro:nth-child(2) {
   transform: rotateY(-45deg);
 }
-/* Mouse no último card, os dois primeiros viram */
-.cards-membros:has(.card-membro:last-child:hover)
-  .card-membro:nth-child(-n + 2) {
-  transform: rotateY(45deg);
-}
-/* Mouse no meio card, os dois da laterais viram */
-.cards-membros:has(.card-membro:nth-child(2):hover) .card-membro:last-child {
-  transform: rotateY(-45deg);
-}
-.cards-membros:has(.card-membro:nth-child(2):hover) .card-membro:first-child {
+/* Mouse no segundo card, o primeiro vira */
+.cards-membros:has(.card-membro:nth-child(2):hover)
+  .card-membro:nth-child(1) {
   transform: rotateY(45deg);
 }
 
+
 .card-membro {
-  margin: 30px;
+  width: 30vw;
+  margin: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border: 2px solid var(--palette-orange);
   border-radius: 10px;
@@ -64,14 +59,14 @@ h2 {
 
 .card-membro > p{
   text-align: justify;
-  padding: .5rem;
+  padding: 0 5rem;
 }
 
 .card-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin: 16px 0;
+  margin: 2rem;
 }
 
 .card-titulo {
@@ -81,6 +76,7 @@ h2 {
 .card-membro a img {
   width: 50px;
   height: 50px;
+  margin-bottom: 1rem;
 }
 
 article {
@@ -92,6 +88,7 @@ article {
   .cards-membros {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .card-membro a img {
@@ -101,12 +98,13 @@ article {
   }
 
   .card-membro {
-    border-bottom: 2px dashed var(--palette-blue);
+    /* border-bottom: 2px dashed var(--palette-blue); */
+    width: 70vw;
   }
 
-  .card-membro:last-child {
+  /* .card-membro:last-child {
     border-bottom: none;
-  }
+  } */
 }
 
 /* Telas maiores */
@@ -114,35 +112,39 @@ article {
 }
 
 /* Telas menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   main{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   article > p{
     width: 300px;
   }
-
+  .membros > p{
+    margin: 1rem;
+    padding: 3rem;
+    text-align: justify;
+  }
   .cards-membros {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .card-membro a img {
     width: 50px;
     height: 50px;
     margin-bottom: 30px;
   }
-
+  .card-membro > p{
+    padding:  1rem;
+  }
   .card-membro {
-    border-bottom: 2px dashed var(--palette-blue);
-    width: 250px;
+    /* border-bottom: 2px dashed var(--palette-blue); */
+    width: 70vw;
   }
 
-  .card-membro:last-child {
+  /* .card-membro:last-child {
     border-bottom: none;
-  }
+  } */
 }
