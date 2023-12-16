@@ -16,7 +16,7 @@ acordeonTriggers.forEach((trigger) => {
 
 // API
 async function fetchProfileData() {
-    const url = "https://raw.githubusercontent.com/Viviane-Maria/js-developer-portfolio/main/data/profile.json";
+    const url = "https://raw.githubusercontent.com/rosanper/ProgramacaoParaCriancas/main/assets/data/perfil.json";
     const response = await fetch(url)
     const profileData = await response.json()
     return profileData
@@ -24,10 +24,6 @@ async function fetchProfileData() {
 
 // Main
 function updateProfileInfo(profileData){
-    const photo = document.getElementById('profile.photo')
-    photo.src = profileData.photo
-    photo.alt = profileData.name
-
     const name = document.getElementById('profile.name')
     name.innerText = profileData.name
 
@@ -45,7 +41,7 @@ function updateGames(profileData){
     games.innerHTML = profileData.games.map(game => {
         return `
         <li>
-        <img src="${game.img}">
+        <img src="${game.name}">
         <a href="${game.url}" target="_blank">${game.name}</a>
         </li>
         `
@@ -57,7 +53,6 @@ function updateVideos(profileData){
     videos.innerHTML = profileData.videos.map(video => {
         return `
         <li>
-        <img src="${video.img}">
         <a href="${video.url}" target="_blank">${video.name}</a>
         </li>
         `
