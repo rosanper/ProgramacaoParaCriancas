@@ -104,8 +104,8 @@ function validarLogin() {
   let senha = document.getElementById("isenha").value;
 
   // Simulação de usuário cadastrado
-  const usuarioValido = "vivi@email.com";
-  const senhaValida = "senha123";
+  const usuarioValido = "aluno@email.com";
+  const senhaValida = "senhaAluno";
 
   // Verifica se o usuário e a senha estão cadastrados
   if (usuario === usuarioValido && senha === senhaValida) {
@@ -146,7 +146,7 @@ document.getElementById("logar").addEventListener("click", function (event) {
   event.preventDefault();
   if (validarLogin()) {
     this.form.submit();
-    alert("Logando...");
+    window.location.href = "./perfil.html";
   }
 });
 
@@ -186,6 +186,7 @@ document
     if (validarCadastro()) {
       this.form.submit();
       alert("Cadastro válido. Enviando formulário...");
+      window.location.href = "./perfil.html";
     } else {
       alert(
         "Por favor, preencha todos os campos do formulário de cadastro corretamente."

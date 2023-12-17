@@ -41,7 +41,6 @@ function updateGames(profileData){
     games.innerHTML = profileData.games.map(game => {
         return `
         <li>
-        <img src="${game.name}">
         <a href="${game.url}" target="_blank">${game.name}</a>
         </li>
         `

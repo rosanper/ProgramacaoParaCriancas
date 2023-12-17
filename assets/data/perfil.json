@@ -4,17 +4,14 @@
   "email": "aluno@email.com",
   "games": [
     {
-      "img": "https://raw.githubusercontent.com/rosanper/ProgramacaoParaCriancas/main/assets/images/jogos/codemonkey.png",
       "name": "CodeMonkey",
       "url": "https://www.codemonkey.com/"
     },
     {
-      "img": "https://raw.githubusercontent.com/rosanper/ProgramacaoParaCriancas/main/assets/images/jogos/codemonkey.png",
       "name": "Flexbox Froggy",
       "url": "https://flexboxfroggy.com/"
     },
     {
-      "img": "https://raw.githubusercontent.com/rosanper/ProgramacaoParaCriancas/main/assets/images/jogos/codemonkey.png",
       "name": "Cidade do Algoritmo",
       "url": "https://play.google.com/store/apps/details?id=air.MusterenGames.ElHarezmiCoding&hl=pt_BR&gl=US"
     }
