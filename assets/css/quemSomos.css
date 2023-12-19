@@ -1,3 +1,12 @@
+body {
+  background: url(../images/quemSomos/background.png);
+  background-size: 100%;
+  background-position: center;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
 main {
   margin: 100px;
 }
@@ -30,6 +39,7 @@ h2 {
   justify-content: space-evenly;
   perspective: 2000px;
   perspective-origin: top;
+  font-weight: normal;
 }
 
 /* Efeito card virando */
@@ -55,6 +65,8 @@ h2 {
   border: 2px solid var(--palette-orange);
   border-radius: 10px;
   transition: transform 1s ease-in-out;
+  background-color: var(--palette-orange);
+  color: black;
 }
 
 .card-membro > p{
