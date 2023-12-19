@@ -74,7 +74,7 @@ for (const video of videos) {
                             <div class="card-body">
                             <h5 class="card-title">${video.titulo}</h5>
                             <p class="card-text">${video.descricao}</p>
-                            <a href=${video.link} target="_blank" class="btn btn-primary btn-modificador">Jogar</a>
+                            <a href=${video.link} target="_blank" class="btn btn-primary btn-modificador">Assistir</a>
                             </div>`
         cardsLine.appendChild(card)
 }
