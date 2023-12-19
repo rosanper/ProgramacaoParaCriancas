@@ -64,3 +64,12 @@ function updateVideos(profileData){
     updateGames(profileData)
     updateVideos(profileData)
 })()
+
+// Botão Sair
+function sairDaPagina() {
+    var confirmacao = confirm("Tem certeza que deseja sair da página?");
+
+    if (confirmacao) {
+        window.location.href = "./index.html";
+    }
+}
