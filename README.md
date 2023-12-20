@@ -1,10 +1,8 @@
 # Programação Para Crianças
 
-Esse repositório se trata da elaboração de um site para ensinar crianças a programar.
+Esse repositório se trata da elaboração de um site para ensinar crianças a programar. Nele, a criança encontrará conteúdos em vídeo e jogos que vão ajudá-lo a se tornar um desenvolvedor.
 
-Nele a criança encontrará conteúdos em vídeo, jogos e texto que vai ajudá-lo a a se tornar um desenvolvedor. Além disso, vai poder interagir com outras crianças a partir do fórum de discursão e testar seus conhecimentos realizando os desafios de códigos presente na plataforma.
-
-Esse projeto foi elaborado como trabalho final do curso de Introdução à Programação com foco em Front-End da Proz.
+Esse projeto foi realizado como trabalho final do curso de Introdução à Programação com foco em Front-End da Proz.
 
 
 ## Tema-Problema
@@ -36,21 +34,12 @@ O programa desenvolvido neste repositório foca no Front-End de um site para ens
 | Página              | Descrição                                                                                                                                       |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Home                | Página principal do site. Nela você consegue ter acesso a todas as outras páginas.                                                              |
-| Aprenda jogando     | Página com conteúdo de jogos que ensinam a programar. Para acessar os jogos basta selecionar um e clicar em jogar.                              |
-| Vídeo aula          | Página com conteúdo de vídeos que ensinam a programar. Para acessar aos vídeos basta selecionar um e clicar em assistir.                        |
-| Textos informativos | Página com conteúdo de textos que ensinam a programar. Para acessar os textos basta selecionar um e clicar em ler.                              |
-| Fórum               | Página onde é possível ver os membros da comunidade, os textos postados no fórum e selecionar para fazer um post.                               |
-| Post                | Página contendo o conteúdo de um post do fórum.                                                                                                 |
-| Criar post          | Página onde é possível construir um conteúdo para ser postado no fórum.                                                                         |
-| Entre na sua conta  | Página para o usuário fazer o login no site. Para fazer o login basta preencher todos os campos e clicar em entrar. Caso o usuário não possua uma conta, basta clicar em “cadastre-se clicando aqui”. |
-| Criar conta         | Página para o usuário criar uma conta no site. Para criar a conta basta preencher todos os campos e clicar em cadastrar.                        |
-| Minha conta         | Página onde é possível ver as informações do usuário. Para alterar alguma informação basta clicar em alterar dados e a página de criar conta será aberta. |
-| Quem somos          | Página falando do projeto de desenvolvimento do site e dos membros da equipe.                                                                   |
+| Aprenda jogando     | Página com conteúdo de jogos que ensinam a programar. Para acessar os jogos basta escolher um e clicar em jogar.                              |
+| Vídeo aula          | Página com conteúdo de vídeos que ensinam a programar. Para acessar aos vídeos basta escolher um e clicar em assistir.                        |
+| Entrar              | Página para o usuário fazer o login no site ou criar o caddastro. Para fazer o login basta preencher todos os campos e clicar em fazer login. Caso o usuário não possua uma conta, basta preencherr o formulário de cadastro e clicar em cadastrar”. |
+| Perfil              | Página onde é possível ver as informações do usuário.       |
+| Quem somos          | Página falando do site e dos membros da equipe.                   |
 
-
-### Regra de negócios
-
-- TODO
 
 ### Layout
 
@@ -60,7 +49,16 @@ O programa desenvolvido neste repositório foca no Front-End de um site para ens
 
 ### Organização das pastas do repositório
 
-- TODO
+Todas as páginas html estão na pasta raiz do projeto.
+
+As pastas contidas no projeto são:
+- assets - Pasta contendo os conteúdos relacionados a CSS, JS e images
+    - css - Contêm todo o conteúdo de css do projeto.
+    - images -  Contêm todas as imagens utilizadas no projeto. É subdivida em pastas com o nome de cada página.
+    - js - Contêm todo o conteúdo de js do projeto.
+- modelagem-banco-de-dados - Pasta contendo a modelagem do banco de dados relacionado ao projeto
+
+As pastas e arquivos com o nome global são de conteúdos que são reutilizados em várias páginas
 
 ### Branch
 
@@ -86,13 +84,20 @@ O programa desenvolvido neste repositório foca no Front-End de um site para ens
 `feat: adicionado novo arquivo`
 
 
+## Regra de Negócio
+
+### Cadastro
+
+Para realizar o cadastro é necessário seguir as seguintes regras:
+- Os campos "Nome completo", "e-mail", "Senha" e "Confirme sua Senha" são obrigatórios;
+- O campo "Nome completo" deve ter pelo menos 3 caracteres;
+- O campo "e-mail" deve conter os caracteres "@" e "." e o formato "XXXX@XXXXX.XXX";
+- O campo "Senha" deve ter pelo menos 6 caracteres;
+- O campo "Confirme sua Senha" deve ser igual ao de "Senha".
+
 ## Equipe
 
 Esse projeto foi realizado pela equipe:
 
-- Altamiro Junior
-- Carla Eduarda Batista Morais
-- Lucas Corrêa Alves
-- Ricardo Augusto Knak
 - Rodrigo Santana Pereira
 - Viviane Maria Oliveira Santos
