@@ -1,7 +1,6 @@
 main {
   margin: 100px;
   font-size: 20px;
-  font-weight: bolder;
 }
 
 h1 {
@@ -57,14 +56,13 @@ h2 {
   border: 2px solid var(--palette-orange);
   border-radius: 10px;
   transition: transform 1s ease-in-out;
-  font-weight: normal;
   background-color: #fff;
 }
 
 .card-membro > p{
   text-align: justify;
   padding: 0 5rem;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .card-img {
